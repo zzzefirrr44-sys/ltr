@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота — JavaScript Promise</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-label">JAVASCRIPT LABORATORY</div>
+            <h1>Асинхронне програмування</h1>
+            <p>Лабораторна робота. Робота з Promise, then, catch та Promise.all</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="info-panel">
+            <div class="info-icon">JS</div>
+            <div>
+                <h2>JavaScript Promise</h2>
+                <p>
+                    Інтерактивна демонстрація асинхронного виконання
+                    операцій за допомогою обіцянок JavaScript.
+                </p>
+            </div>
+        </section>
+
+        <div id="loader" style="display: none;">
+            <span class="spinner"></span>
+            <span>Завантаження...</span>
+        </div>
+
+        <div id="result" aria-live="polite">
+            <div class="empty-result">
+                Результати виконання завдань з'являтимуться тут.
+            </div>
+        </div>
+
+        <section class="task-card">
+            <div class="task-number">01</div>
+            <div class="task-content">
+                <span class="tag">PROMISE</span>
+                <h2>Створення Promise</h2>
+                <p>
+                    Створити Promise, який виконується через 2 секунди
+                    та повертає повідомлення "Hello, World!".
+                </p>
+                <button id="task1Btn">Запустити завдання</button>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <div class="task-number">02</div>
+            <div class="task-content">
+                <span class="tag">THEN / CATCH</span>
+                <h2>Перевірка числа</h2>
+                <p>
+                    Якщо число більше 10 — Promise виконується.
+                    В іншому випадку Promise відхиляється.
+                </p>
+
+                <div class="input-group">
+                    <label for="numberInput">Введіть число:</label>
+                    <input type="number" id="numberInput" value="15">
+                </div>
+
+                <button id="task2Btn">Перевірити число</button>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <div class="task-number">03</div>
+            <div class="task-content">
+                <span class="tag">RANDOM / TIMER</span>
+                <h2>Випадкове число</h2>
+                <p>
+                    Створити Promise, який виконується через випадковий
+                    час від 1 до 3 секунд та повертає число від 1 до 100.
+                </p>
+                <button id="task3Btn">Згенерувати число</button>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <div class="task-number">04</div>
+            <div class="task-content">
+                <span class="tag">COMPARISON</span>
+                <h2>Порівняння чисел</h2>
+                <p>
+                    Порівняти два числа через Promise із затримкою
+                    в одну секунду.
+                </p>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="num1">Перше число:</label>
+                        <input type="number" id="num1" value="25">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="num2">Друге число:</label>
+                        <input type="number" id="num2" value="10">
+                    </div>
+                </div>
+
+                <button id="task4Btn">Порівняти числа</button>
+            </div>
+        </section>
+
+        <section class="task-card">
+            <div class="task-number">05</div>
+            <div class="task-content">
+                <span class="tag">PROMISE.ALL</span>
+                <h2>Виконання декількох Promise</h2>
+                <p>
+                    Створити три Promise із затримками 1, 2 та 3 секунди.
+                    Отримати випадкові числа та обчислити їхню суму.
+                </p>
+                <button id="task5Btn">Запустити Promise.all</button>
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>JavaScript Laboratory | Promise & Asynchronous Programming</p>
+        </div>
+    </footer>
+
+</body>
+</html>
